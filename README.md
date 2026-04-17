@@ -17,3 +17,5 @@ A full-stack web application that detects phishing emails using fine-tuned trans
 ## How to Run
 cd backend → venv\Scripts\activate → uvicorn main:app --reload --port 8000
 cd frontend → npm run dev → open http://localhost:5173
+
+##Dataset Link: https://drive.google.com/file/d/1EbDe3172kq0fr6zHqJAonvZ7YYX-nLws/view?usp=sharing
