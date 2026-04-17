@@ -1,0 +1,24 @@
+# =============================================================================
+# requirements.txt — Python Package Dependencies
+# =============================================================================
+# Install all packages by running:
+#   pip install -r requirements.txt
+#
+# NOTE: Requires Python 3.11 (not 3.12 or 3.14)
+#       pydantic-core does not yet support Python 3.14
+# =============================================================================
+
+# FastAPI — web framework for building the REST API
+fastapi==0.111.0
+
+# Uvicorn — ASGI server that runs the FastAPI app
+uvicorn[standard]==0.29.0
+
+# Python-multipart — needed for handling form data in FastAPI
+python-multipart==0.0.9
+
+# Pydantic — data validation for request and response models
+pydantic==2.11.4
+
+# Python-dotenv — loads .env file variables into the environment
+python-dotenv==1.0.1

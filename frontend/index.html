@@ -1,0 +1,71 @@
+<!doctype html>
+<!--
+  index.html — Main HTML Entry Point
+  ===================================
+  This is the single HTML page that React renders into.
+  React mounts into the <div id="root"> element.
+  All fonts are loaded from Google Fonts here.
+  Global CSS animations are also defined here to avoid Tailwind dependency.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard — Email Threat Detector</title>
+
+    <!-- Google Fonts -->
+    <!-- Space Mono: used for labels, headings, badges (monospace feel) -->
+    <!-- DM Sans: used for body text, email content (clean readable font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ── Global Reset ── */
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      /* ── Base styles ── */
+      body {
+        background: #0a0e1a;       /* Dark navy background */
+        color: #e8f4fd;             /* Light blue-white text */
+        font-family: 'DM Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ── Custom scrollbar ── */
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: #0a0e1a; }
+      ::-webkit-scrollbar-thumb { background: #1e2d45; border-radius: 3px; }
+
+      /* ── CSS Animations ── */
+
+      /* Spinner rotation — used by Spinner.jsx loading component */
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Slide up + fade in — used by ResultCard.jsx when result appears */
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Fade in — used by History list */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      /* Animation utility classes */
+      .slide-up { animation: slideUp 0.35s ease-out; }
+      .fade-in  { animation: fadeIn  0.3s  ease-out; }
+    </style>
+  </head>
+  <body>
+    <!-- React mounts here — everything is rendered by React -->
+    <div id="root"></div>
+
+    <!-- React entry point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
